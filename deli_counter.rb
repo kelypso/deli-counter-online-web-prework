@@ -12,10 +12,10 @@ def line(katz_deli)
   end
 end
 
-def take_a_number(katz_deli, name)
-  katz_deli << name 
-  place_in_line = katz_deli.length
-  puts "Welcome, #{name}. You are number #{place_in_line} in line."
+def take_a_number(katz_deli, number)
+  katz_deli << number 
+  puts "Welcome, you are ticket number #{number}. You are number #{katz_deli.length} in line."
+  #welcome, you are ticket number 1. You are number 1 in line. 
 end
 
 def now_serving(line)
@@ -27,5 +27,8 @@ def now_serving(line)
   line = line.shift
 end
 
-puts now_serving(katz_deli)
-puts katz_deli
+take_a_number(katz_deli, 1)
+take_a_number(katz_deli, 2)
+now_serving(katz_deli)
+take_a_number(katz_deli, 3)
+
